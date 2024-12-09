@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Books</title>
+</head>
+<body>
+    <h2>Search Books</h2>
+    <form method="post">
+        <label>Keyword:</label>
+        <input type="text" name="keyword" required><br>
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for book in results %}
+            <li><strong>{{ book.title }}</strong> by {{ book.author }} (Copies: {{ book.copies }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

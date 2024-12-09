@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Members</title>
+</head>
+<body>
+    <h2>Members List</h2>
+    <ul>
+        {% for member_id, details in members.items() %}
+            <li><strong>{{ details.name }}</strong> ({{ details.email }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
